@@ -11,4 +11,5 @@ galaxy_info:
   galaxy_tags: []
 
 dependencies:
-- role: openmicroscopy.basedeps
+- src: openmicroscopy.basedeps
+  version: 1.0.0
