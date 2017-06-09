@@ -1,0 +1,13 @@
+---
+dependency:
+  name: galaxy
+  requirements_file: tests/requirements.yml
+driver:
+  name: docker
+docker:
+  containers:
+    - name: ansible-role-cli-utils
+      image: centos
+      image_version: 7
+verifier:
+  name: testinfra

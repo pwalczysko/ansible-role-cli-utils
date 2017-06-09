@@ -9,7 +9,7 @@ This is intended for utilities that are generally useful but are not strictly ne
 Dependencies
 ------------
 
-Depends on the `basedeps` role.
+Depends on the `openmicroscopy.basedeps` role.
 
 
 Author Information
