@@ -2,7 +2,7 @@ CLI utils
 =========
 
 [![Build Status](https://travis-ci.org/ome/ansible-role-cli-utils.svg)](https://travis-ci.org/ome/ansible-role-cli-utils)
-[![Ansible Role](https://img.shields.io/ansible/role/41085.svg)](https://galaxy.ansible.com/ome/cli_utils/)
+[![Ansible Role](https://img.shields.io/ansible/role/41382.svg)](https://galaxy.ansible.com/ome/cli_utils/)
 
 Useful command-line utilities for administering a server.
 
