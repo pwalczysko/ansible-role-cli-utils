@@ -1,4 +1,5 @@
 galaxy_info:
+  role_name: cli_utils
   author: ome-devel@lists.openmicroscopy.org.uk
   description: Useful command-line utilities for administering a server
   company: Open Microscopy Environment
@@ -11,4 +12,4 @@ galaxy_info:
   galaxy_tags: []
 
 dependencies:
-- role: openmicroscopy.basedeps
+- ome.basedeps
