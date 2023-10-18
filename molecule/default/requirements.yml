@@ -3,5 +3,5 @@
   src: https://github.com/jburel/ansible-role-basedeps/
   version: rocky_ubuntu
 - name: cli_utils
-  src: https://github.com/jburel/ansible-role-basedeps/
+  src: https://github.com/pwalczysko/ansible-role-cli-utils/
   version: Rocky9
