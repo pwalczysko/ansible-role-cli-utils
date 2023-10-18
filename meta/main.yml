@@ -1,6 +1,6 @@
 ---
 galaxy_info:
-  role_name: cli_utils
+  role_name: ome.cli_utils
   author: ome-devel@lists.openmicroscopy.org.uk
   description: Useful command-line utilities for administering a server
   company: Open Microscopy Environment
