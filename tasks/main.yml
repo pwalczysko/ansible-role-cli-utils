@@ -10,8 +10,6 @@
     update_cache: true
     name:
       - bzip2
-      - epel-release
-      - screen
       - tmux
       - zsh
     state: present
