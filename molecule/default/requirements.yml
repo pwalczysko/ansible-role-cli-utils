@@ -1,2 +1,7 @@
 ---
-- role: ome.basedeps
+- name: basedeps
+  src: https://github.com/jburel/ansible-role-basedeps/
+  version: rocky_ubuntu
+- name: cli_utils
+  src: https://github.com/jburel/ansible-role-basedeps/
+  version: Rocky9

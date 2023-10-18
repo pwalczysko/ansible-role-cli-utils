@@ -3,7 +3,8 @@
 
 - name: system packages | cli user utils
   become: true
-  yum:
+  ansible.builtin.dnf:
+    update_cache: true
     name:
       - bzip2
       - screen
