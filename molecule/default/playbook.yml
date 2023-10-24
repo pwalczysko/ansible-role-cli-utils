@@ -2,4 +2,4 @@
 - name: Converge
   hosts: all
   roles:
-    - role: cli_utils
+    - role: ome.cli_utils
