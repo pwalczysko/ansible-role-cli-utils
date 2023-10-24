@@ -4,12 +4,20 @@
 # "screen" package is not available on RHEL 9
 # https://access.redhat.com/solutions/4136481
 # or Rocky Linux 9
+- name: system packages | install epel repo
+  become: true
+  ansible.builtin.dnf:
+    name: epel-release
+    state: present
+  when: ansible_os_family == 'RedHat'
+
 - name: system packages | cli user utils
   become: true
   ansible.builtin.dnf:
     update_cache: true
     name:
       - bzip2
+      - screen
       - tmux
       - zsh
     state: present
