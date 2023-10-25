@@ -3,13 +3,25 @@
 
 # "screen" package is not available on RHEL 9
 # https://access.redhat.com/solutions/4136481
-# or Rocky Linux 9
+# whereas we can use epel to install it on
+# Rocky Linux 9
+- name : check rocky.repo file
+  stat:
+    path: /etc/yum.repos.d/rocky.repo
+  register: rockyrepo_name
+
+- name: system packages | Add CRB repository for RHEL
+  become: true
+  ansible.builtin.command:
+    subscription-manager repos --enable codeready-builder-for-rhel-9-x86_64-rpms
+  when: ansible_os_family == 'RedHat' and not rockyrepo_name.stat.exists
+
 - name: system packages | install epel repo
   become: true
   ansible.builtin.dnf:
     name: epel-release
     state: present
-  when: ansible_os_family == 'RedHat'
+  when: rockyrepo_name.stat.exists
 
 - name: system packages | cli user utils
   become: true
@@ -21,3 +33,15 @@
       - tmux
       - zsh
     state: present
+  when: rockyrepo_name.stat.exists
+
+- name: system packages | cli user utils
+  become: true
+  ansible.builtin.dnf:
+    update_cache: true
+    name:
+      - bzip2
+      - tmux
+      - zsh
+    state: present
+  when: ansible_os_family == 'RedHat' and not rockyrepo_name.stat.exists
