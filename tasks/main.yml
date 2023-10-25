@@ -29,19 +29,7 @@
     update_cache: true
     name:
       - bzip2
-      - screen
       - tmux
       - zsh
     state: present
-  when: rockyrepo_name.stat.exists
-
-- name: system packages | cli user utils
-  become: true
-  ansible.builtin.dnf:
-    update_cache: true
-    name:
-      - bzip2
-      - tmux
-      - zsh
-    state: present
-  when: ansible_os_family == 'RedHat' and not rockyrepo_name.stat.exists
+  when: ansible_os_family == 'RedHat'
