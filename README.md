@@ -2,7 +2,7 @@ CLI utils
 =========
 
 [![Actions Status](https://github.com/ome/ansible-role-cli-utils/workflows/Molecule/badge.svg)](https://github.com/ome/ansible-role-cli-utils/actions)
-[![Ansible Role](https://img.shields.io/ansible/role/41382.svg)](https://galaxy.ansible.com/ome/cli_utils/)
+[![Ansible Role](https://img.shields.io/badge/ansible--galaxy-cli_utils-blue.svg)](https://galaxy.ansible.com/ui/standalone/roles/ome/cli_utils/)
 
 Useful command-line utilities for administering a server.
 
