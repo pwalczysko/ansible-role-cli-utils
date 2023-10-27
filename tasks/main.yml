@@ -1,15 +1,6 @@
 ---
 # tasks file for roles/cli-utils
 
-# "screen" package is not available on RHEL 9
-# https://access.redhat.com/solutions/4136481
-# whereas we can use epel to install it on
-# Rocky Linux 9
-- name : check rocky.repo file
-  stat:
-    path: /etc/yum.repos.d/rocky.repo
-  register: rockyrepo_name
-
 - name: Import a key for epel
   ansible.builtin.rpm_key:
     state: present
