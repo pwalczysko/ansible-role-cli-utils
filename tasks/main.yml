@@ -29,6 +29,7 @@
     update_cache: true
     name:
       - bzip2
+      - screen
       - tmux
       - zsh
     state: present
