@@ -23,6 +23,20 @@
     state: present
   when: rockyrepo_name.stat.exists
 
+- name: Import a key for postgres
+  ansible.builtin.rpm_key:
+    state: present
+    key:  https://download.postgresql.org/pub/repos/yum/RPM-GPG-KEY-PGDG
+
+- name: postgres | setup dnf repository
+  become: true
+  ansible.builtin.dnf:
+    update_cache: true
+    name:
+      https://download.postgresql.org/pub/repos/yum/reporpms/EL-9-x86_64/pgdg-redhat-repo-latest.noarch.rpm
+    state: present
+
+
 - name: system packages | cli user utils
   become: true
   ansible.builtin.dnf:
