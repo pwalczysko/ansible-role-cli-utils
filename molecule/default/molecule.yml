@@ -10,13 +10,6 @@ lint: |
 platforms:
   - name: instance
     image: rockylinux:9
-    image_version: latest
-    privileged: true
-    cgroupns_mode: host
-    tmpfs:
-      - /sys/fs/cgroup
-    groups:
-      - extra_options
 provisioner:
   name: ansible
   lint:
