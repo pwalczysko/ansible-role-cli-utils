@@ -1,2 +1,6 @@
 ---
-- src: ome.basedeps
+
+# - role: ome.basedeps
+- name: basedeps
+  src: https://github.com/pwalczysko/ansible-role-basedeps
+  version: update-framework
